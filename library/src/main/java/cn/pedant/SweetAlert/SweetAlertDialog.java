@@ -6,6 +6,8 @@ import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.AlphaAnimation;
@@ -269,7 +271,9 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
         mContentText = text;
         if (mContentTextView != null && mContentText != null) {
             showContentText(true);
-            mContentTextView.setText(mContentText);
+            mContentTextView.setText(Html.fromHtml(mContentText));
+            mContentTextView.setMovementMethod(new LinkMovementMethod());
+
         }
         return this;
     }

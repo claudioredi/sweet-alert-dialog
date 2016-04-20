@@ -49,7 +49,7 @@ public class SampleActivity extends Activity implements View.OnClickListener {
             case R.id.success_text_test:
                 new SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE)
                         .setTitleText("Good job!")
-                        .setContentText("You clicked the button!")
+                        .setContentText("You clicked the button! <a href='http://https://github.com/claudioredi/sweet-alert-dialog'>visit project page</a>")
                         .show();
                 break;
             case R.id.warning_confirm_test:
